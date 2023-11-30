@@ -1,6 +1,5 @@
 const sequelize = require('sequelize');
 const database = require('../db');
-const Clinica = require('./Clinica');
 const Pessoa = require('./Pessoa');
 const shema="";
 
@@ -35,4 +34,3 @@ Clinica.init(
 module.exports= Clinica;
 
 
-Clinica.belongsTo(Usuario,{foreignKey: 'idUsuario'});

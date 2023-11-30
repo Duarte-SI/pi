@@ -6,5 +6,7 @@ const database = new sequelize('HemoPatas','duarteBruno','banco1pi2',
 });
 
 database.sync();
-
-module.export = database;
+const db = {};
+db.Sequelize = sequelize;
+db.sequelize = database;
+module.exports = database;
