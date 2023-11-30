@@ -1,6 +1,8 @@
-const { Sequelize, Model, DataTypes } = require('sequelize');
+const Sequelize = require('sequelize');
+const Usuario = require('./Usuario'); 
+const { DataTypes, Model } = require('sequelize');
 const sequelize = new Sequelize('mssql://duarteBruno:banco1pi2@localhost:1433/HemoPatas');
-const Usuario = require('./Usuario'); // Importando o model Usuario
+
 class Pessoa extends Model {}
 
 Pessoa.init(
@@ -21,5 +23,5 @@ Pessoa.init(
         sequelize: sequelize, modelName:'Pessoa'
     }
 )
-Pessoa.hasOne(Usuario,{foreignKey:'idUsuario'});
+
 module.exports=Pessoa;

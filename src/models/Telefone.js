@@ -1,6 +1,6 @@
 const sequelize = require('sequelize');
 const database = require('../db');
-const Telefone = require('./Telefone');
+const Usuario = require('./Usuario');
 const shema = "";
 
 class Telefone extends sequelize.Model{}
@@ -19,7 +19,7 @@ Telefone.init(
             autoIncrement:false,
             primaryKey:true,
             references:{
-                model:'Usuario',
+                model: Usuario,
                 key:'idUsuario'
             }
         },
